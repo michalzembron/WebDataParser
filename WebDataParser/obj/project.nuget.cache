@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cMFUuhTPxSpHwVkiO4JMH7mmZD/QX8QFGnGELHLsR9EZUMcWtffYp6T516iEwJQhNhgVGAObNFBbERQJ8JOqmA==",
+  "dgSpecHash": "bPyD3hWlvkWf2hTiApJ94MhmYe8QcR+z6Meff7gOmg1yZPFZEI7GL+BFWV3IqSizJKyE8cksbjCBvNKLURqU0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zuzia\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
+  ],
   "logs": []
 }

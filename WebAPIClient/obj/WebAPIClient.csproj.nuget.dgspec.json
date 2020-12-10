@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {}
+    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebAPIClient\\WebAPIClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {
+    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebAPIClient\\WebAPIClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
-        "projectName": "WebDataParser",
-        "projectPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
+        "projectUniqueName": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebAPIClient\\WebAPIClient.csproj",
+        "projectName": "WebAPIClient",
+        "projectPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebAPIClient\\WebAPIClient.csproj",
         "packagesPath": "C:\\Users\\Zuzia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\obj\\",
+        "outputPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebAPIClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,14 +41,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "RestSharp": {
-              "target": "Package",
-              "version": "[106.11.7, )"
-            }
-          },
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",

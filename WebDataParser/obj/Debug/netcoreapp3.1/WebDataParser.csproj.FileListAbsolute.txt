@@ -1,0 +1,15 @@
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.exe
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.deps.json
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.runtimeconfig.json
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.runtimeconfig.dev.json
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.dll
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\WebDataParser.pdb
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.csprojAssemblyReference.cache
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.AssemblyInfoInputs.cache
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.AssemblyInfo.cs
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.csproj.CoreCompileInputs.cache
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.dll
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.pdb
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.genruntimeconfig.cache
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\Zuzia\Documents\GitHub\WebDataParser\WebDataParser\obj\Debug\netcoreapp3.1\WebDataParser.csproj.CopyComplete
