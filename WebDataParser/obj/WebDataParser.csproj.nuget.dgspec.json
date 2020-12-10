@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {}
+    "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {
+    "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
+        "projectUniqueName": "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
         "projectName": "WebDataParser",
-        "projectPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
-        "packagesPath": "C:\\Users\\Zuzia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zuzia\\Documents\\GitHub\\WebDataParser\\WebDataParser\\obj\\",
+        "projectPath": "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\WebDataParser.csproj",
+        "packagesPath": "C:\\Users\\mihu9\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mihu9\\Documents\\GitHub\\WebDataParser\\WebDataParser\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zuzia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\mihu9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -64,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
