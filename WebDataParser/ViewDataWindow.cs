@@ -16,7 +16,7 @@ namespace WebDataParser
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Stream myStream;
+            //Stream myStream;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
             saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
@@ -25,11 +25,22 @@ namespace WebDataParser
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if ((myStream = saveFileDialog1.OpenFile()) != null)
-                {
+                //if ((myStream = saveFileDialog1.OpenFile()) != null)
+                //{
                     // Code to write the stream goes here.
-                    myStream.Close();
-                }
+
+                    string textToBeSaved = richTextBox_CovidData.Text.Replace("},\n", "},");
+
+                    //Zapis do pliku
+                    //string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output.txt");
+                    //destPath = destPath.Replace("WebDataParser\\bin\\Debug\\netcoreapp3.1\\", "");
+                    //File.WriteAllText(destPath, dataToBeSaved.ToString());
+                    System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName.ToString());
+                    file.WriteLine(textToBeSaved);
+                    file.Close();
+
+                //    myStream.Close();
+                //}
             }
         }
 
