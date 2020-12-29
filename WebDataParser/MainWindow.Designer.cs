@@ -78,11 +78,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(725, 462);
             this.Controls.Add(this.btn_Summary);
             this.Controls.Add(this.btn_ConfirmedPL);
             this.Controls.Add(this.btn_AllCasesWorld);
             this.Controls.Add(this.btn_AllCasesPL);
+            this.MinimumSize = new System.Drawing.Size(210, 180);
             this.Name = "WebDataParser";
             this.Text = "WebDataParser";
             this.ResumeLayout(false);

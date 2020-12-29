@@ -24,17 +24,18 @@ namespace WebDataParser
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             IRestResponse response = client.Execute(request);
-            string responseContent = response.Content;
-            Console.WriteLine(responseContent);
+            string parsedData = response.Content;
+            //Console.WriteLine(parsedData);
 
-            string dataToBeSaved = responseContent;
-            dataToBeSaved = dataToBeSaved.Replace("},", "},\n");
-            string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output.txt");
-            destPath = destPath.Replace("WebDataParser\\bin\\Debug\\netcoreapp3.1\\", "");
+            //string parsedData = responseContent;
+            parsedData = parsedData.Replace("},", "},\n");
 
-            File.WriteAllText(destPath, dataToBeSaved.ToString());
+            //Zapis do pliku
+            //string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Output.txt");
+            //destPath = destPath.Replace("WebDataParser\\bin\\Debug\\netcoreapp3.1\\", "");
+            //File.WriteAllText(destPath, dataToBeSaved.ToString());
 
-            return dataToBeSaved.ToString();
+            return parsedData.ToString();
         }
 
         private void btn_AllCasesPL_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
-                var openWindow = new ViewDataWindow();
+                var openWindow = new ViewDataWindow(covidData);
                 openWindow.Show();
             }
         }
@@ -54,7 +55,7 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
-                var openWindow = new ViewDataWindow();
+                var openWindow = new ViewDataWindow(covidData);
                 openWindow.Show();
             }
         }
@@ -65,7 +66,7 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
-                var openWindow = new ViewDataWindow();
+                var openWindow = new ViewDataWindow(covidData);
                 openWindow.Show();
             }
         }
@@ -76,7 +77,7 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
-                var openWindow = new ViewDataWindow();
+                var openWindow = new ViewDataWindow(covidData);
                 openWindow.Show();
             }
         }
