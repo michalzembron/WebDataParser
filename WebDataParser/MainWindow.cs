@@ -43,6 +43,8 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
+                var openWindow = new ViewDataWindow();
+                openWindow.Show();
             }
         }
 
@@ -52,6 +54,8 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
+                var openWindow = new ViewDataWindow();
+                openWindow.Show();
             }
         }
 
@@ -61,6 +65,8 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
+                var openWindow = new ViewDataWindow();
+                openWindow.Show();
             }
         }
 
@@ -70,6 +76,8 @@ namespace WebDataParser
             if (covidData != null)
             {
                 //Wyświetl ekran z danymi
+                var openWindow = new ViewDataWindow();
+                openWindow.Show();
             }
         }
     }
