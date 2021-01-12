@@ -63,21 +63,9 @@ def loadFile(folderName):
             es.index(index="covid", id=id, body=loadedData)
             id = id + 1
         currentDate = currentDate + datetime.timedelta(days=1)
-    #askUserForFile = input("write file name (for example: 2021-01-12)")
-    #fileName = "ParsedData/" + askUserForFile + ".json"
-    #if os.path.isfile(fileName):
-    #    with open(fileName) as file:
-    #        loadedData = json.load(file)
-    #    es.index(index="covid", id=1, body=loadedData)
-    #else:
-    #    print("File not found.")
-    #res = es.get(index="covid", id=1)
-    #print(res['result'])
-    #es.indices.refresh(index="covid")
-
-
-def passDataToElastic():
-    print("elastic")
+    print("Finished.")
+    res = es.get(index="covid", id=id-1)
+    print(res)
     mainMenu()
 
 
@@ -91,9 +79,8 @@ def mainMenu():
     if menu == "1":
         getDataByCountryAllStatus()
     elif menu == "2":
-        folderName = input("path to data folder: ")
+        folderName = input("folder name (default \"ParsedData\"): ")
         loadFile(folderName + "/")
-        passDataToElastic()
     elif menu == "exit":
         print("Shutting down...")
     else:
