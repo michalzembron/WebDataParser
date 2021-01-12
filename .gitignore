@@ -1,7 +1,4 @@
 #
 #*.rsuser
 
-#
-#[Dd]ebug/
-
-ParsedData/*
+[Pp]arsedData/*.json
