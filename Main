@@ -1,10 +1,103 @@
+import json
+import os
+from os import listdir
+from os.path import isfile, join
+
 import requests
+from elasticsearch import Elasticsearch
+import datetime
+from flask import jsonify
 
-url = "https://api.covid19api.com/dayone/country/south-africa/status/confirmed"
+es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
-payload = {}
-headers= {}
 
-response = requests.request("GET", url, headers=headers, data = payload)
+# url = "https://api.covid19api.com/dayone/country/poland/status/confirmed"
+# url = "https://api.covid19api.com/country/poland/status/confirmed?from=2020-03-04T00:00:00Z&to=2021-01-11T00:00:00Z"
+# dzien, miesiac, rok
+# currentDate = str(currentDate.day) + "-" + str(currentDate.month) + "-" + str(currentDate.year)
+# print(currentDate)
 
-print(response.text.encode('utf8'))
+def getDataByCountryAllStatus():
+    startDate = datetime.date(2020, 3, 4)
+    # rok, miesiac, dzien
+    currentDate = datetime.date.today()
+    print(currentDate)
+    url = "https://api.covid19api.com/country/poland?" + \
+          "from=" + str(startDate) + "T00:00:00Z&" + \
+          "to=" + str(datetime.date.today()) + "T00:00:00Z"
+    payload = {}
+    headers = {}
+    response = requests.request("GET", url, headers=headers, data=payload)
+    parsedFile = json.loads(response.text.encode("utf8"))
+
+    for element in parsedFile:
+        element.pop('Province', None)
+        element.pop('City', None)
+        element.pop('CityCode', None)
+
+    saveFile(startDate, 'ParsedData/', parsedFile)
+
+
+def saveFile(startDate, folderName, parsedData):
+    fileList = [f for f in listdir(folderName) if isfile(join(folderName, f))]
+    i = startDate
+    for json_obj in parsedData:
+        filename = str(i) + '.json'
+        if filename not in fileList:
+            print("Saved: " + filename)
+            with open(folderName + filename, 'w') as out_json_file:
+                # Save each obj to their respective filepath
+                # with pretty formatting thanks to `indent=4`
+                json.dump(json_obj, out_json_file, indent=4)
+        i = i + + datetime.timedelta(days=1)
+    mainMenu()
+
+
+def loadFile(folderName):
+    id = 1
+    currentDate = datetime.date(2020, 3, 4)
+    while currentDate <= (datetime.date.today() - datetime.timedelta(days=1)):
+        if os.path.isfile(folderName + str(currentDate) + '.json'):
+            with open(folderName + str(currentDate) + '.json') as file:
+                loadedData = json.load(file)
+            es.index(index="covid", id=id, body=loadedData)
+            id = id + 1
+        currentDate = currentDate + datetime.timedelta(days=1)
+    #askUserForFile = input("write file name (for example: 2021-01-12)")
+    #fileName = "ParsedData/" + askUserForFile + ".json"
+    #if os.path.isfile(fileName):
+    #    with open(fileName) as file:
+    #        loadedData = json.load(file)
+    #    es.index(index="covid", id=1, body=loadedData)
+    #else:
+    #    print("File not found.")
+    #res = es.get(index="covid", id=1)
+    #print(res['result'])
+    #es.indices.refresh(index="covid")
+
+
+def passDataToElastic():
+    print("elastic")
+    mainMenu()
+
+
+def mainMenu():
+    menu = input(
+        "\"1\" to download fresh data from 2020-03-04 to today (" + str(datetime.date.today()) + ") by country (Poland)" +
+        "\n\"2\" to push data to elasticsearch" +
+        "\n\"exit\" to exit" +
+        "\n")
+
+    if menu == "1":
+        getDataByCountryAllStatus()
+    elif menu == "2":
+        folderName = input("path to data folder: ")
+        loadFile(folderName + "/")
+        passDataToElastic()
+    elif menu == "exit":
+        print("Shutting down...")
+    else:
+        mainMenu()
+
+
+mainMenu()
