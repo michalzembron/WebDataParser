@@ -19,7 +19,7 @@ namespace WebDataParser
             //Stream myStream;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|json files (*.json)|*.json|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
 

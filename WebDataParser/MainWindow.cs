@@ -16,6 +16,8 @@ namespace WebDataParser
 
         private string getCovidData(string queryURL)
         {
+            //niemcy, czechy, polska porównanie
+            //polska - świat porównanie czy w tym samym okresie są wzrosty i tu i tu
             //var client = new RestClient("https://api.covid19api.com/total/country/poland");
             //var client = new RestClient("https://api.covid19api.com/world/total");
             //var client = new RestClient("https://api.covid19api.com/dayone/country/poland/status/confirmed/live");
