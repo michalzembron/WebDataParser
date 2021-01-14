@@ -54,8 +54,6 @@ def loadFile(folderName, countryName):
             fileID = fileID + 1
         currentDate = currentDate + datetime.timedelta(days=1)
     print("Finished.")
-    res = es.get(index="covid-" + countryName, id=fileID - 1)
-    print(res)
     mainMenu()
 
 
