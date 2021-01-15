@@ -1,5 +1,4 @@
 .idea/workspace.xml
 
-[Cc]ovid-germany/*.json
+[Cc]ovid-*/*.json
 
-[Cc]ovid-poland/*.json

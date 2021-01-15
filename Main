@@ -26,6 +26,7 @@ def getDataByCountryAllStatus(folderName, countryName):
         element.pop('Province', None)
         element.pop('City', None)
         element.pop('CityCode', None)
+        element.pop('ID', None)
 
     saveFile(startDate, folderName + '/', parsedFile)
 
@@ -45,7 +46,7 @@ def saveFile(startDate, folderName, parsedData):
 
 def loadFile(folderName, countryName):
     fileID = 1
-    currentDate = datetime.date(2020, 3, 4)
+    currentDate = datetime.date(2020, 3, 1)
     while currentDate <= (datetime.date.today() - datetime.timedelta(days=1)):
         if os.path.isfile(folderName + str(currentDate) + '.json'):
             with open(folderName + str(currentDate) + '.json') as file:
